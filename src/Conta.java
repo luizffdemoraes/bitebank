@@ -1,5 +1,5 @@
 public class Conta {
-    double saldo;
+    double saldo = 100;
     int agencia = 42;
     int numero;
     Cliente titular;
