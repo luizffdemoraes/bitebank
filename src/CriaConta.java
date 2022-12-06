@@ -2,25 +2,25 @@ public class CriaConta {
     public static void main(String[] args) {
         Conta primeiraConta = new Conta();
         primeiraConta.deposita(200);
-        System.out.println(primeiraConta.pegaSaldo());
+        System.out.println(primeiraConta.getSaldo());
 
         primeiraConta.deposita(100);
-        System.out.println(primeiraConta.pegaSaldo());
+        System.out.println(primeiraConta.getSaldo());
 
         Conta segundaConta = new Conta();
         segundaConta.deposita(300);
 
-        System.out.println("Primeira conta tem o saldo.: " + primeiraConta.pegaSaldo());
-        System.out.println("Segunda conta tem o saldo.: " + segundaConta.pegaSaldo());
+        System.out.println("Primeira conta tem o saldo.: " + primeiraConta.getSaldo());
+        System.out.println("Segunda conta tem o saldo.: " + segundaConta.getSaldo());
 
-        primeiraConta.agencia = 146;
-        System.out.println(primeiraConta.agencia);
-        System.out.println(primeiraConta.numero);
+        primeiraConta.setAgencia(146);
+        System.out.println(primeiraConta.getAgencia());
+        System.out.println(primeiraConta.getNumero());
 
-        System.out.println(segundaConta.agencia);
+        System.out.println(segundaConta.getAgencia());
 
-        segundaConta.agencia = 146;
-        System.out.println("Agora a segunda conta esta " + " na agencia " + segundaConta.agencia);
+        segundaConta.setAgencia(146);
+        System.out.println("Agora a segunda conta esta " + " na agencia " + segundaConta.getAgencia());
 
         if (primeiraConta == segundaConta) {
             System.out.println("Mesma conta");
