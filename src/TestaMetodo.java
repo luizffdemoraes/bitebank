@@ -2,12 +2,12 @@ public class TestaMetodo {
 
     public static void main(String[] args) {
         Conta contaDoPaulo = new Conta();
-        contaDoPaulo.saldo = 100;
+        contaDoPaulo.deposita(100);
         contaDoPaulo.deposita(50);
-        System.out.println(contaDoPaulo.saldo);
+        System.out.println(contaDoPaulo.pegaSaldo());
 
         boolean conseguiuRetirar = contaDoPaulo.saca(20);
-        System.out.println(contaDoPaulo.saldo);
+        System.out.println(contaDoPaulo.pegaSaldo());
         System.out.println(conseguiuRetirar);
 
         Conta contaDaMarcela = new Conta();
@@ -20,8 +20,8 @@ public class TestaMetodo {
         } else {
             System.out.println("Faltou dinheiro");
         }
-        System.out.println(contaDaMarcela.saldo);
-        System.out.println(contaDoPaulo.saldo);
+        System.out.println(contaDaMarcela.pegaSaldo());
+        System.out.println(contaDoPaulo.pegaSaldo());
     }
 }
 
