@@ -1,13 +1,13 @@
 public class CriaConta {
     public static void main(String[] args) {
-        Conta primeiraConta = new Conta();
+        Conta primeiraConta = new Conta(1337, 24226, 1, new Cliente("Paulo Silveira", "222.222.222-22", "Programador"));
         primeiraConta.deposita(200);
         System.out.println(primeiraConta.getSaldo());
 
         primeiraConta.deposita(100);
         System.out.println(primeiraConta.getSaldo());
 
-        Conta segundaConta = new Conta();
+        Conta segundaConta = new Conta(1337, 24226, 1, new Cliente("Paulo Silveira", "222.222.222-22", "Programador"));
         segundaConta.deposita(300);
 
         System.out.println("Primeira conta tem o saldo.: " + primeiraConta.getSaldo());
