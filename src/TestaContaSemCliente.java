@@ -1,12 +1,13 @@
 public class TestaContaSemCliente {
-    public static void main(String[] args) {
-        Conta contaDaMarcela = new Conta(1337, 24226, 1, new Cliente("Paulo Silveira", "222.222.222-22", "Programador"));
-        System.out.println(contaDaMarcela.getSaldo());
-        Cliente cliente = new Cliente("Paulo Silveira", "222.222.222-22", "Programador");
-        cliente.setNome("Marcela");
+	public static void main(String[] args) {
+		Conta contaDaMarcela = new Conta(6646,969060);
+		System.out.println(contaDaMarcela.getSaldo());
 
-        contaDaMarcela.setTitular(cliente);
-        System.out.println(contaDaMarcela.getTitular());
-        System.out.println(contaDaMarcela.getTitular().getNome());
-    }
+		contaDaMarcela.setTitular(new Cliente());
+		System.out.println(contaDaMarcela.getTitular());
+
+		contaDaMarcela.getTitular().setNome("Marcela");
+		System.out.println(contaDaMarcela.getTitular().getNome());
+
+	}
 }
