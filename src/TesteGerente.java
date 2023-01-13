@@ -2,6 +2,10 @@ import java.sql.SQLOutput;
 
 public class TesteGerente {
     public static void main(String[] args) {
+
+        Gerente gerente = new Gerente();
+
+
         Gerente g1 = new Gerente();
         g1.setNome("Marco");
         g1.setCpf("622.203.840-98");
