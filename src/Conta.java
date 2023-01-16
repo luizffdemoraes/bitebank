@@ -30,7 +30,7 @@ public class Conta {
         return false;
     }
 
-    public void transfere(double valor, Conta destino) {
+    public void transfere(double valor, Conta destino) throws SaldoInsuficienteException{
         this.saca(valor);
         destino.deposita(valor);
     }
