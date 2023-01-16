@@ -21,7 +21,7 @@ public class Conta {
         this.saldo = this.saldo + valor;
     }
 
-    public boolean saca(double valor) {
+    public boolean saca(double valor) throws SaldoInsuficienteException {
         if (this.saldo < valor) {
             //problema
             throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
