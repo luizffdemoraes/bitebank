@@ -1,6 +1,6 @@
 package teste;
 
-public class Teste {
+public class TesteArrayDePrimitivo {
 
     // Array [] estrtutura de dados
     public static void main(String[] args) {
