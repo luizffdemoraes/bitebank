@@ -1,19 +1,21 @@
 package teste;
 
+import modelo.Conta;
 import modelo.ContaCorrente;
+import modelo.ContaPoupanca;
 
 public class TesteArrayReferencias {
     public static void main(String[] args) {
-        ContaCorrente[] contas = new ContaCorrente[5];
+        Conta[] contas = new Conta[5];
         ContaCorrente cc1 = new ContaCorrente(22, 11);
-        ContaCorrente cc2 = new ContaCorrente(22, 22);
+        ContaPoupanca cc2 = new ContaPoupanca(22, 22);
 
         contas[0] = cc1;
         contas[1] = cc2;
 
-        ContaCorrente referencia = contas[1];
+        ContaPoupanca referencia = (ContaPoupanca) contas[1];
 
-        System.out.println(contas[1].getNumero());
+        System.out.println(cc2.getNumero());
         System.out.println(referencia.getNumero());
     }
 }
