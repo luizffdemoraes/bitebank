@@ -8,7 +8,10 @@ import java.util.ArrayList;
 public class Teste {
 
     public static void main(String[] args) {
-        ArrayList lista = new ArrayList();
+        // Generics
+        ArrayList<Conta> lista = new ArrayList();
+
+        ArrayList<String> nomes = new ArrayList<String>();
 
         Conta cc = new ContaCorrente(22, 11);
         lista.add(cc);
@@ -31,15 +34,14 @@ public class Teste {
         lista.add(cc4);
 
         for (int i = 0; i < lista.size(); i++) {
-            Object oRef = lista.get(i);
+            Conta oRef = lista.get(i);
             System.out.println(oRef);
         }
 
         System.out.println("-----------------");
 
-        for (Object o : lista) {
+        for (Conta o : lista) {
             System.out.println(o);
         }
-
     }
 }
