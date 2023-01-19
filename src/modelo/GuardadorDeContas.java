@@ -1,5 +1,7 @@
 package modelo;
 
+import modelo.Conta;
+
 public class GuardadorDeContas {
     private Conta[] referencias;
     private int posicaoLivre;

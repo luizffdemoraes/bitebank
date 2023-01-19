@@ -4,7 +4,7 @@ import modelo.Conta;
 import modelo.ContaCorrente;
 import modelo.GuardadorDeContas;
 
-public class Teste {
+public class TesteGuardadorReferencias {
     public static void main(String[] args) {
         GuardadorDeContas guardador = new GuardadorDeContas();
 
