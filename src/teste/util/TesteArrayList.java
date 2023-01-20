@@ -4,14 +4,14 @@ import modelo.Conta;
 import modelo.ContaCorrente;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class TesteArrayList {
 
     public static void main(String[] args) {
-        // Generics
-        ArrayList<Conta> lista = new ArrayList();
 
-        ArrayList<String> nomes = new ArrayList<String>();
+        List<Conta> lista = new LinkedList<Conta>();
 
         Conta cc = new ContaCorrente(22, 11);
         lista.add(cc);
@@ -43,5 +43,15 @@ public class TesteArrayList {
         for (Conta o : lista) {
             System.out.println(o);
         }
+
+
+        /*
+        // Generics
+        ArrayList<Conta> lista = new ArrayList();
+
+        ArrayList<String> nomes = new ArrayList<String>();
+
+
+         */
     }
 }
