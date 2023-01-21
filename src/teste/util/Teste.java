@@ -1,25 +1,64 @@
 package teste.util;
 
+import modelo.Conta;
+import modelo.ContaCorrente;
+import modelo.ContaPoupanca;
+
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Teste {
 
     public static void main(String[] args) {
 
-        int idade = 29; // Integer
-        // Integer idadeRef = new Integer(29); deprecated
+        Conta cc1 = new ContaCorrente(22, 33);
+        cc1.deposita(333.0);
 
-        Integer idadeRef = Integer.valueOf(idade); // Autoboxing
-        int value = idadeRef.intValue(); // Unboxing
+        Conta cc2 = new ContaPoupanca(22, 44);
+        cc2.deposita(444.0);
 
-        System.out.println(idadeRef.doubleValue());
-        System.out.println(Integer.MAX_VALUE);
-        System.out.println(Integer.MIN_VALUE);
+        Conta cc3 = new ContaCorrente(22, 11);
+        cc3.deposita(111.0);
 
-        int numero = Integer.parseInt("29"); // Conversão de String para tipo primitivo
+        Conta cc4 = new ContaPoupanca(22, 22);
+        cc4.deposita(222.0);
 
-        List<Integer> numeros = new ArrayList<Integer>();
-        numeros.add(29); // Autoboxing
+        List<Conta> lista = new ArrayList<>();
+        lista.add(cc1);
+        lista.add(cc2);
+        lista.add(cc3);
+        lista.add(cc4);
+
+        for (Conta conta : lista) {
+            System.out.println(conta);
+        }
+
+        NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+        lista.sort(comparator);
+
+        System.out.println("------------------");
+
+        for (Conta conta : lista) {
+            System.out.println(conta);
+        }
     }
 }
+
+class NumeroDaContaComparator implements Comparator<Conta> {
+
+    @Override
+    public int compare(Conta c1, Conta c2) {
+
+        if (c1.getNumero() < c2.getNumero()) {
+            return -1;
+        }
+
+        if (c1.getNumero() > c2.getNumero()) {
+            return 1;
+        }
+
+        return 0;
+    }
+}
+
