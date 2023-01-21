@@ -6,12 +6,13 @@ import modelo.ContaCorrente;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 public class TesteArrayList {
 
     public static void main(String[] args) {
 
-        List<Conta> lista = new LinkedList<Conta>();
+        List<Conta> lista = new Vector<>(); // tread safe
 
         Conta cc = new ContaCorrente(22, 11);
         lista.add(cc);
