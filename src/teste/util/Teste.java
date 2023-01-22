@@ -6,6 +6,7 @@ import modelo.ContaCorrente;
 import modelo.ContaPoupanca;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -49,7 +50,11 @@ public class Teste {
 
         NumeroDaContaComparator comparator = new NumeroDaContaComparator();
         TitularDaContaComparator titularComparator = new TitularDaContaComparator();
-        lista.sort(titularComparator);
+        lista.sort(new TitularDaContaComparator());
+
+        // Ordem natural
+        Collections.sort(lista);
+        // Collections.reverse(lista);
 
         System.out.println("------------------");
 
@@ -72,6 +77,12 @@ class NumeroDaContaComparator implements Comparator<Conta> {
     @Override
     public int compare(Conta c1, Conta c2) {
 
+        return Integer.compare(c1.getNumero(), c2.getNumero());
+
+        // return c1.getNumero() - c2.getNumero();
+
+     /*
+
         if (c1.getNumero() < c2.getNumero()) {
             return -1;
         }
@@ -81,6 +92,8 @@ class NumeroDaContaComparator implements Comparator<Conta> {
         }
 
         return 0;
+
+      */
     }
 }
 
