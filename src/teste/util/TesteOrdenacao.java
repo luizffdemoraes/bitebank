@@ -47,6 +47,7 @@ public class TesteOrdenacao {
             System.out.println(conta);
         }
 
+        // Function Object
         NumeroDaContaComparator comparator = new NumeroDaContaComparator();
         TitularDaContaComparator titularComparator = new TitularDaContaComparator();
         //lista.sort(new TitularDaContaComparator());
