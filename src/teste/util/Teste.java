@@ -51,8 +51,6 @@ public class Teste {
             return Integer.compare(c1.getNumero(), c2.getNumero());
         });
 
-
-
         /*
         lista.sort(new Comparator<Conta>() { //classe anonima
             @Override
